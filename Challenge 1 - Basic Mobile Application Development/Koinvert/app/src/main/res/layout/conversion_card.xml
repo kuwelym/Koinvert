@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.kuwelym.koinvert.ui.viewmodel.CurrencyViewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/conversion_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:background="@android:color/white"
+        app:cardCornerRadius="@dimen/_12sdp"
+        app:cardElevation="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_12sdp">
+
+            <!-- Source Amount Section -->
+
+            <TextView
+                android:id="@+id/amount_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/amount"
+                android:textColor="#7A8FA6"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/source_amount_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="start"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toStartOf="@+id/source_amount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/amount_textView">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/source_currency_flag"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/source_currency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textColor="#2D3A6D"
+                        android:textSize="@dimen/_14ssp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/source_currency_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textColor="@color/design_default_color_secondary_variant"
+                        android:textSize="@dimen/_10ssp"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Exchange Icon -->
+            <EditText
+                android:id="@+id/source_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:background="@drawable/edittext_background"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="end"
+                android:hint="@string/_0_0"
+                android:text="@string/_1_0"
+                android:inputType="numberDecimal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/source_amount_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/exchange_button"
+                app:layout_constraintTop_toTopOf="@+id/source_amount_layout" />
+
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="@+id/exchange_button"
+                app:layout_constraintEnd_toStartOf="@+id/exchange_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/exchange_button" />
+
+            <Button
+                android:id="@+id/exchange_button"
+                android:layout_width="@dimen/_38sdp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@drawable/exchange_icon"
+                android:contentDescription="@string/exchange_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/source_amount"
+                app:tint="#4B67ED" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="@+id/exchange_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/exchange_button"
+                app:layout_constraintTop_toTopOf="@+id/exchange_button" />
+
+            <!-- Converted Amount Section -->
+            <TextView
+                android:id="@+id/converted_amount_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/converted_amount"
+                android:textColor="#7A8FA6"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/exchange_button" />
+
+            <LinearLayout
+                android:id="@+id/converted_amount_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="start"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toStartOf="@+id/target_amount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/converted_amount_textView">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/target_currency_flag"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/target_currency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textColor="#2D3A6D"
+                        android:textSize="@dimen/_14ssp" />
+
+                    <TextView
+                        android:id="@+id/target_currency_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:textColor="@color/design_default_color_secondary_variant"
+                        android:textSize="@dimen/_10ssp"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/target_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="end"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/converted_amount_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/exchange_button"
+                app:layout_constraintTop_toTopOf="@+id/converted_amount_layout" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

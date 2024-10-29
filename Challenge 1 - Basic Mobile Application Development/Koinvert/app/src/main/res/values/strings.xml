@@ -1,3 +1,63 @@
 <resources>
     <string name="app_name">Koinvert</string>
+    <string name="enter_amount">Enter amount</string>
+    <string name="from_currency">From currency (e.g., USD)</string>
+    <string name="to_currency">To currency (e.g., EUR)</string>
+    <string name="convert">Convert</string>
+    <string name="equal">=</string>
+    <string name="_1">1</string>
+    <string name="indicative_exchange_rate">Indicative Exchange Rate</string>
+    <string name="choose_currency">Choose currency</string>
+    <string name="search_country_or_currency">Search country or currency</string>
+    <string name="cancel">Cancel</string>
+    <string name="amount">Amount</string>
+    <string name="_0_0">0.0</string>
+    <string name="_1_0">1.0</string>
+    <string name="exchange_icon">Exchange Icon</string>
+    <string name="converted_amount">Converted Amount</string>
+    <string name="currency_converter">Currency Converter</string>
+    <string name="convert_your_currency_to_another_currency">Convert your currency to another currency</string>
+
+    <string-array name="CurrencySymbol" >
+        <item>Afghanistan,AFN,؋</item>
+        <item>Akrotiri and Dhekelia,EUR,€</item>
+        <item>Albania,ALL,Lek</item>
+        <item>Algeria,DZD,د.ج</item>
+        <item>American Samoa,USD,$</item>
+        <item>Andorra,EUR,€</item>
+        <item>Angola,AOA,Kz</item>
+        <item>Anguilla,XCD,$</item>
+        <item>Antigua and Barbuda,XCD,$</item>
+        <item>Argentina,ARS,$</item>
+        <item>Armenia,AMD,֏</item>
+        <item>Aruba,AWG,ƒ</item>
+        <item>Ascension Island,SHP,£</item>
+        <item>Australia,AUD,$</item>
+        <item>Austria,EUR,€</item>
+        <item>Azerbaijan,AZN,₼</item>
+        <item>Bahamas,BSD,$</item>
+        <item>Bahrain,BHD,ب.د</item>
+        <item>Bangladesh,BDT,৳</item>
+        <item>Barbados,BBD,$</item>
+        <item>Belarus,BYN,Br</item>
+        <item>Belgium,EUR,€</item>
+        <item>Belize,BZD,BZ$</item>
+        <item>Benin,XOF,Fr</item>
+        <item>Bermuda,BMD,$</item>
+        <item>Bhutan,BTN,Nu.</item>
+        <item>Bolivia,BOB,Bs.</item>
+        <item>Bosnia and Herzegovina,BAM,KM</item>
+        <item>Botswana,BWP,P</item>
+        <item>Brazil,BRL,R$</item>
+        <item>British Indian Ocean Territory,USD,$</item>
+        <item>British Virgin Islands,USD,$</item>
+        <item>Brunei,BND,$</item>
+        <item>Bulgaria,BGN,лв</item>
+        <item>Burkina Faso,XOF,Fr</item>
+        <item>Burundi,BIF,Fr</item>
+        <item>Cambodia,KHR,៛</item>
+        <item>Cameroon,XAF,Fr</item>
+    </string-array>
+
+
 </resources>

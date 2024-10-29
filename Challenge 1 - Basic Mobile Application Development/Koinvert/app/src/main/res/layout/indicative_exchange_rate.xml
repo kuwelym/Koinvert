@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/indicative_exchange_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/indicative_exchange_rate"
+        android:textColor="#7A8FA6"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/indicative_from_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/_1"
+        android:textColor="#2D3A6D"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/indicative_exchange_rate" />
+
+    <TextView
+        android:id="@+id/indicative_from_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="#2D3A6D"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toEndOf="@id/indicative_from_amount"
+        app:layout_constraintTop_toBottomOf="@id/indicative_exchange_rate" />
+
+    <TextView
+        android:id="@+id/equal_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/equal"
+        android:textColor="#2D3A6D"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toEndOf="@id/indicative_from_currency"
+        app:layout_constraintTop_toBottomOf="@id/indicative_exchange_rate" />
+
+    <TextView
+        android:id="@+id/indicative_to_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="#2D3A6D"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toEndOf="@id/equal_sign"
+        app:layout_constraintTop_toBottomOf="@id/indicative_exchange_rate" />
+
+    <TextView
+        android:id="@+id/indicative_to_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="#2D3A6D"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toEndOf="@id/indicative_to_amount"
+        app:layout_constraintTop_toBottomOf="@id/indicative_exchange_rate" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
